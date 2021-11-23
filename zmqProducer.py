@@ -7,7 +7,7 @@ ctx=zmq.Context()
 sockRECV=ctx.socket(zmq.REQ)
 sockRECV.connect("tcp://127.0.0.1:5555")#ch1:5556 ch2:5558
 sockPUSH=ctx.socket(zmq.PUSH)
-sockPUSH.connect("tcp://127.0.0.1:5556")
+sockPUSH.bind("tcp://127.0.0.1:5556")
 
 sockRECV.send_string("ewe")
 msgRow="iwiu"
