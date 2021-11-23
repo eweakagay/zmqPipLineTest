@@ -13,7 +13,7 @@ while True:
     i=0
     msg=sockPULL.recv_json()
     msg=json.loads(msg)
-    print("ch1:recved"+msg["msg"])
+    print("ch1:recved "+msg["msg"])
     Json=json.dumps({"id":i,"msg":msg["msg"]})
     sockPUSH.send_json(Json)
     i=i+1
